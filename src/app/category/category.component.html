@@ -1,0 +1,3 @@
+<div class="list-group" #list>
+    <a class="list-group-item list-group-item-action pointer user-select-none" id="{{category.id}}" (click)="changeActive(list, category.id)" *ngFor="let category of categories">{{category.name}}</a>
+</div>
