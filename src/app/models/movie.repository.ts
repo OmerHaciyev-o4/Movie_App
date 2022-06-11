@@ -45,4 +45,29 @@ export class MovieRepository{
     getMovieById(id: number): Movie | undefined{
         return this.movies.find((m) => m.id == id);
     }
+
+    clearMovies(){
+      this.movies = new Array<Movie>();
+    }
+
+    addMovie(movieTitle: string, movieDescription: string, movieImageUrl: string){
+      var id = this.movies.length + 1;
+      this.movies.push({
+        id: id,
+        title: movieTitle,
+        description: movieDescription,
+        imageUrl: movieImageUrl
+      });
+    }
+
+    removeMovie(id: number){
+      console.log("yes worked");
+      for (let i = 0; i < this.movies.length; i++) {
+        const movie = this.movies[i];
+        if (movie.id == id) {
+          this.movies.splice(i, 1); 
+          break;
+        }
+      }
+    }
 }

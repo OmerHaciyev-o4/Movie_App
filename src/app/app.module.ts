@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MoviesComponent } from './movies/movies.component';
 import { MovieComponent } from './movies/movie/movie.component';
+import { NewsComponent } from './news/news.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { MovieComponent } from './movies/movie/movie.component';
     FooterComponent,
     MovieDetailsComponent,
     MoviesComponent,
-    MovieComponent
+    MovieComponent,
+    NewsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
